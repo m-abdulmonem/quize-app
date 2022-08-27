@@ -35,7 +35,7 @@ class HomeBody extends StatelessWidget {
               GetBuilder<QuestionController>(
                 init: QuestionController(),
                 builder: (con) => CustomText(
-                  controller.storage.read("points_key").toString(),
+                  (controller.storage.read("points_key") ?? 0).toString(),
                   fontSize: 60,
                 ),
               ),
